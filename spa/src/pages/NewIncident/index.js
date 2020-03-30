@@ -12,32 +12,27 @@ import './styles.css'
 // importar imagens do assets
 import logoImg from '../../assets/logo.svg'
 
-export default function Register() {
+export default function NewIncident() {
     return (
-        <div className="register-container">
+        <div className="new-incident-container">
             <div className="content">
                 <section>
                     <img src={logoImg} alt="Be The Hero"/>
 
-                    <h1>Cadastro</h1>
+                    <h1>Cadastrar Novo Caso</h1>
 
-                    <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
+                    <p>Descreva o caso detalhadamente para encontrar um heroi para resolver isso.</p>
 
-                    <Link className="back-link" to="/">
+                    <Link className="back-link" to="/profile">
                         <FiArrowLeft size={16} color="E02041" />
-                        Voltar para tela inicial
+                        Voltar para Home
                     </Link>
                 </section>
 
                 <form>
-                    <input placeholder="Nome da ONG" />
-                    <input type="email" placeholder="E-mail" />
-                    <input placeholder="WhatsApp" />
-
-                    <div className="input-group">
-                        <input placeholder="Cidade" />
-                        <input placeholder="UF" style={{ width: 80 }}/>
-                    </div>
+                    <input placeholder="Titulo do Caso" />
+                    <textarea placeholder="Descricao" />
+                    <input placeholder="Valor em Reais" />
 
                     <button className="button" type="submit">Cadastrar</button>
                 </form>
