@@ -10,6 +10,9 @@ const IncidentController = require('./controllers/IncidentController')
 // importar controlador de Login
 const SessionController = require('./controllers/SessionController')
 
+// importar controlador de Profile
+const ProfileController = require('./controllers/ProfileController')
+
 // Variavel gerenciamento de Rotas
 const routes = express.Router()
 
@@ -17,6 +20,9 @@ const routes = express.Router()
 
 // Login
 routes.post('/sessions', SessionController.create)
+
+// Profile
+routes.get('/profile', ProfileController.index)
 
 // CRUD ongs
 
